@@ -10,4 +10,4 @@ with payments as (
     from dbt_training.stripe.payment
 )
 
-select * from payments;
+select * from payments
