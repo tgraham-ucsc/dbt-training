@@ -1,0 +1,39 @@
+{
+    "sqltools.connections": [
+        {
+            "authenticator": "EXTERNALBROWSER",
+            "ocspOptions": {
+                "ocspFailOpen": true
+            },
+            "snowflakeOptions": {
+                "clientSessionKeepAlive": true,
+                "clientSessionKeepAliveHeartbeatFrequency": 3600
+            },
+            "previewLimit": 50,
+            "driver": "Snowflake",
+            "name": "UCSC Snowflake",
+            "account": "zna67203",
+            "username": "tgraham@ucsc.edu",
+            "database": "DBT_DB",
+            "warehouse": "COMPUTE_WH"
+        },
+        {
+            "authenticator": "SNOWFLAKE",
+            "ocspOptions": {
+                "ocspFailOpen": true
+            },
+            "snowflakeOptions": {
+                "clientSessionKeepAlive": true,
+                "clientSessionKeepAliveHeartbeatFrequency": 3600
+            },
+            "previewLimit": 50,
+            "driver": "Snowflake",
+            "name": "DBT Fundamentals",
+            "account": "zna67203",
+            "username": "dbt_training_01",
+            "password": ".v2QWTeHghcs2msgrVA3d3M",
+            "database": "TRAINING_DB",
+            "warehouse": "TRAINING_VWH"
+        }
+    ]
+}
