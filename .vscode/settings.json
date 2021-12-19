@@ -32,7 +32,7 @@
             "account": "zna67203",
             "username": "dbt_training_01",
             "password": ".v2QWTeHghcs2msgrVA3d3M",
-            "database": "TRAINING_DB",
+            "database": "DBT_TRAINING",
             "warehouse": "TRAINING_VWH"
         }
     ]

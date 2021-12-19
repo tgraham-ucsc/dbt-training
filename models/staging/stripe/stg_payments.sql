@@ -1,4 +1,3 @@
-with payments as (
 
     select 
         id as payment_id,
@@ -7,7 +6,4 @@ with payments as (
         status as payment_status,
         {{ cents_to_dollars('amount', 4) }} as payment_amount,
         created as created_at
-    from dbt_training.stripe.payment
-)
-
-select * from payments
+    from dbt_training.stripe.payments
