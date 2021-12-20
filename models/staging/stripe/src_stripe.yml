@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  -name: stripe
+  - name: stripe
     database: dbt_training
     schema: stripe
     tables:
