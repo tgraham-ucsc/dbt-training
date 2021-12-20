@@ -3,4 +3,4 @@ select
     user_id as customer_id,
     order_date,
     status as order_status
-from dbt_training.jaffle_shop.orders
+from {{ source('jaffle_shope','orders') }}

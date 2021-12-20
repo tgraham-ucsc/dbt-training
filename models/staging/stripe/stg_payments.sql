@@ -6,4 +6,4 @@
         status as payment_status,
         {{ cents_to_dollars('amount', 4) }} as payment_amount,
         created as created_at
-    from dbt_training.stripe.payments
+    from {{ source('stripe','payments') }}
