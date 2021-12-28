@@ -1,4 +1,16 @@
-{%- set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] -%}
+    {%- set get_payment_methods -%}
+      select distinct payment_method from {{ ref('stg_payments') }}
+    {%- endset -%}
+
+
+{%- set results = run_query(get_payment_methods) -%}
+
+{%- if execute -%}
+{# Return the first column #}
+{%- set results_list = results.columns[0].values() -%}
+{% else %}
+{% set results_list = [] %}
+{%- endif -%}
 
 with payments as (
 
@@ -9,7 +21,7 @@ with payments as (
 pivioted as (
 
     select order_id,
-     {% for payment_method in payment_methods -%}
+    {%- for payment_method in results_list -%}
            sum(case when payment_method = '{{ payment_method }}' then payment_amount else 0 end ) as {{ payment_method }}_amount
         {%- if not loop.last -%}
            ,
