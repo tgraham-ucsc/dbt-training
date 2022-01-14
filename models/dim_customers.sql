@@ -4,23 +4,12 @@
 {{ config(materialized='table') }}
 
 with customers as (
-    select
-        id as customer_id,
-        first_name,
-        last_name
-    from jaffle_shop.customers
-),
-
-orders as (
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-    from jaffle_shop.orders
-),
-
-customer_orders as (
+    select * from {{ ref('stg_customers') }}    
+), 
+     orders as (
+         select * from {{ ref('stg_orders') }}
+     ),
+ customer_orders as (
     select
         customer_id,
         min(order_date) as first_order_date,
