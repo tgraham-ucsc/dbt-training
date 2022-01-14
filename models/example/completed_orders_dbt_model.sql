@@ -1,4 +1,6 @@
-/* Model files are just select statements..? */
+/* Model files are just select statements..? 
+Each model has a one-to-one relationshipt with a table or view 
+in the data warehouse" ??? ==> this may be referencing the "output" (stg or dimentional tables)? */
 
 /*
    Trying to create a new table in snowflake via dbt materialization
