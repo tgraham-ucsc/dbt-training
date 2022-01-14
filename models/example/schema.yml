@@ -19,3 +19,37 @@ models:
             tests:
                 - unique
                 - not_null
+
+    - name: returns_dbt_model
+      description: "Retrieves a list of returned orders"
+      columns:
+          - name: Customer
+            description: "Name of Customer of returned order"
+            tests:
+                - not_null
+                - unique
+          - name: Num_returns
+            description: "Number of orders returned by the customer"
+            tests:
+                - not_null
+          - name: TotalAmount
+            description: "Name of Customer of returned order"
+            tests:
+                - not_null
+
+    - name: completed_orders_dbt_model
+      description: "Retrieves a list of completed orders"
+      columns:
+          - name: Customer
+            description: "Name of Customer of returned order"
+            tests:
+                - not_null
+                - unique
+          - name: Num_completed
+            description: "Number of orders returned by the customer"
+            tests:
+                - not_null
+          - name: totalAmount
+            description: "Name of Customer of returned order"
+            tests:
+                - not_null
