@@ -30,3 +30,8 @@ The dbt Fundamentals course begins with a series of video introductions.  During
 [Sign up for GitHub](https://github.com)
 
 [Sign up for dbt cloud](https://cloud.getdbt.com/signup/)
+
+## Additional Resources
+
+- [dbt Slack Channel](https://www.getdbt.com/community/join-the-community)
+- [anyone can transform with dbt](https://getdbt.wistia.com/medias/f90bwl0y17)
