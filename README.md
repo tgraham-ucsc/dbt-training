@@ -11,18 +11,22 @@ dbt Labs offers free online high-quality training that provides a hands-on exper
 - Strongly encouraged: Basic Understanding of Git.
 
 
-## Where do I start?
-
-You'll need to create accounts on a couple of cloud providers to participate in the class.  
-
-[Sign up for GitHub](https://github.com)
-
-[Sign up for dbt cloud](https://cloud.getdbt.com/signup/)
-
 ## Important Changes during setup!
+The course instructs you to create your own personal GitHub repository and a trial Snowflake account. The changes outlined below will allow you to access the UCSC Snowflake account and work from a shared GitHub repository. 
 
+The dbt Fundamentals course begins with a series of video introductions.  During the third series under "Setup dbt Cloud" there is a section called "Connect to your warehouse and repository"  You will want to pause at this point and connect with a project team member that will be able to provide the Snowflake account information as well as authentication information.  
+
+## Ready to get started?
+
+[Enroll in dbt Fundamentals](https://courses.getdbt.com/courses/fundamentals)
 
 ## FAQ
 
 #### Why GitHub and not UCSC managed Bitbucket?
 - dbt Cloud, the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) that is used through out the class integrates natively with GitHub. Should we adopt dbt Cloud, this functionality will likely migrate to Bitbucket.
+
+#### What accounts do I need to create in order to participate in the class?  
+
+[Sign up for GitHub](https://github.com)
+
+[Sign up for dbt cloud](https://cloud.getdbt.com/signup/)
