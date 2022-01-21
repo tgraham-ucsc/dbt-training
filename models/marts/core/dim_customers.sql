@@ -1,7 +1,4 @@
-
-
-
-{{ config(materialized='table') }}
+/* materialization to be configured on the dbt_project.yml file */
 
 with customers as (
     select * from {{ ref('stg_customers') }}    
