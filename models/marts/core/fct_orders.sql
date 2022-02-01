@@ -23,7 +23,7 @@ from customers,
      orders,
      payments
 
-where customers.customers_id=orders.customer_id
+where customers.customer_id=orders.customer_id
 and   orders.order_id=payments.order_id
 
 )
