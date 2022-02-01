@@ -15,9 +15,9 @@ payments as (
 customer_order_payments as (
 
     select
-     orders.order_id,
-     customers.customer_id,
-     payments.amount
+      customers.customer_id,
+      orders.order_id,
+      payments.amount
 
 from customers,
      orders,
