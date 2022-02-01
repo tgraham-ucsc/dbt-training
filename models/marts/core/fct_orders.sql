@@ -1,18 +1,29 @@
-with payments as (
-    select * from {{ ref('stg_payments') }}
+with customers as (
+    select * from {{ ref('stg_customers')}}
 ),
 
 orders as (
     select * from {{ ref('stg_orders') }}
 ),
 
-payment_orders as (
+payments as (
+    select * from {{ ref('stg_payments') }}
+),
+
+
+
+customer_order_payments as (
 
     select
      orders.order_id,
-     orders.customer_id,
+     customers.customer_id,
      payments.amount
 
-from stripe.payments
+from customers,
+     orders,
+     payments
+
+where customers.customers_id=orders.customer_id
+and   orders.order_id=payments.order_id
 
 )
