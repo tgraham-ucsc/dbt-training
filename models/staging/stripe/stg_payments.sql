@@ -8,7 +8,7 @@ with payments as (
         amount,
         created
 
-    from stripe.payments
+    from stripe.payment
 )
 
 select * from payments
