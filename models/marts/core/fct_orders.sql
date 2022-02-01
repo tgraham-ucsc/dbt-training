@@ -8,12 +8,11 @@ orders as (
 
 payment_orders as (
 
-    select 
-        
+    select
+     orders.order_id,
+     orders.customer_id,
+     payments.amount
+
+from stripe.payments
+
 )
-
-orders.order_id,
-orders.customer_id,
-payments.amount
-
-from stripe
