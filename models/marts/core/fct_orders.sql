@@ -27,3 +27,5 @@ where customers.customers_id=orders.customer_id
 and   orders.order_id=payments.order_id
 
 )
+
+select * from customer_order_payments
