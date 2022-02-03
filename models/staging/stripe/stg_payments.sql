@@ -1,14 +1,9 @@
-with payments as (
-    
-    select
-        id as payment_id,
-        orderid as order_id,
-        paymentmethod as payment_method,
-        status,
-        amount/100 as amount,
-        created as created
+select
+    id as payment_id,
+    orderid as order_id,
+    paymentmethod as payment_method,
+    status,
+    amount/100 as amount,
+    created as created
 
-    from stripe.payment
-)
-
-select * from payments
+from {{ source('stripe', 'payment')}}
