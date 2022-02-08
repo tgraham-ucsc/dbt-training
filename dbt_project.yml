@@ -39,3 +39,8 @@ models:
       +materialized: view
     marts:
       +materialized: table
+    stripe:
+      +materialized: view
+  marts:
+    core:
+      +materialized: table
