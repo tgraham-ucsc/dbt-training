@@ -9,11 +9,16 @@ models:
         tests:
           - unique
           - not_null
+      - name: first_name
+        description: First Name
+      - name: last_name
+        description: Last Name
 
   - name: stg_orders
     description: Staged order data from our jaffle shop app.
     columns:
       - name: order_id
+        description: The primary key for orders.
         tests:
           - unique
           - not_null

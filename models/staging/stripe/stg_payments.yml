@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: Staged data from the Strip source
+    columns: 
+      - name: payment_id
+        description: The primary key for payments
+      - name: amount
+        description: Converted to dollars
