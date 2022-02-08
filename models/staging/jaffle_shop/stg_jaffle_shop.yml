@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_customers
-    description: Staged customer data from our jaffle shop app.
+    description: One unique customer per row
     columns: 
       - name: customer_id
         description: The primary key for customers.
