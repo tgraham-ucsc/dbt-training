@@ -14,7 +14,12 @@ dbt Labs offers free online high-quality training that provides a hands-on exper
 ## Important Changes during setup!
 The course instructs you to create your own personal GitHub repository and a trial Snowflake account. The changes outlined below will allow you to access the UCSC Snowflake account and work from a shared GitHub repository. 
 
-The dbt Fundamentals course begins with a series of video introductions.  During the third series under "Setup dbt Cloud" there is a section called "Connect to your warehouse and repository"  You will want to **pause at this point** and connect with a project team member that will be able to provide the Snowflake account information as well as authentication information.  
+The dbt Fundamentals course begins with a series of video introductions.  During the third series under "Setup dbt Cloud" there is a section called "Connect to your warehouse and repository"  You will want to **pause at this point** and connect with a project team member that will be able to provide the Snowflake account information as well as authentication information. 
+
+
+## Important course code accomodations for UCSC's specific Snowflake DBT training schemas
+You will need to replace the schema used in the videos (raw) with the schemas (jaffle_shop & stripe) we have used to stage the training data in UCSC's Snowflake DBT_TRAINING database. It is best you login to the Snowflake DBT_TRAINING database to see what table(s) reside in each schema so you know when to reference each, but remember to always replace the "raw" schema used in the videos with either the "jaffle_shop" or 'stripe" schemas. This first appears in the "Building your first model" lesson of the "Models" module.
+
 
 ## Ready to get started?
 
