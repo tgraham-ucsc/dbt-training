@@ -6,7 +6,9 @@ with orders as (
         order_date,
         status
 
-    from dbt_training.jaffle_shop.orders
+  from dbt_training.jaffle_shop.orders
+
+    
 
 )
 
