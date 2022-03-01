@@ -8,7 +8,7 @@ select
     total_lifetime_value,
     round(amount/100.0,2) as order_value_dollars,
     orders.status as order_status,
-    payments.status as payment_status
+    payment.status as payment_status
 from {{ source('jaffle_shop', 'orders') }}
 
 join (
