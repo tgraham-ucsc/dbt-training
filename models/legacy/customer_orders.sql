@@ -61,6 +61,6 @@ join (
 on orders.user_id = customer_order_history.customer_id
 
 left outer join {{ source('stripe', 'payment') }}
-on orders.id = payments.orderid
+on orders.id = payment.orderid
 
 where payments.status != 'fail'
