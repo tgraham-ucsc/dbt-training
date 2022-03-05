@@ -5,11 +5,7 @@ sources:
     description: Data about customers and orders from jaffle shop.
     database: dbt_training
     schema: jaffle_shop
-    tables:
-      - name: customers
-        description: Raw customer data from jaffle shop.
-      - name: orders
-        description: Raw orders data from jaffle shop.
+
  
  models:
   - name: dim_customers
