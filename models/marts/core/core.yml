@@ -2,9 +2,9 @@ version: 2
 
 sources:
  
- 
- - name: dim_customers
-    description: Information regarding the customer base.
+ models:
+  - name: dim_customers
+    description:  Information regarding the customer base.
     columns: 
       - name: customer_id
         description: The primary key dim_customers.
