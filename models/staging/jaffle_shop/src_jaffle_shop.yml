@@ -6,7 +6,7 @@ sources:
     database: dbt_training
     schema: jaffle_shop
     tables:
-      - name: customers
+      - name: ld_customers
         description: Raw customer data from jaffle shop.
       - name: orders
         description: Raw orders data from jaffle shop.

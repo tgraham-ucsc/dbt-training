@@ -21,7 +21,7 @@ pivioted as (
 
     select order_id,
     {%- for payment_method in results_list -%}
-           sum(case when payment_method = '{{ payment_method }}' then payment_amount else 0 end ) as {{ payment_method }}_amount
+           sum(case when payment_method = '{{ payment_method }}' then amount else 0 end ) as {{ payment_method }}_amount
         {%- if not loop.last -%}
            ,
         {%- endif %}
