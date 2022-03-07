@@ -1,7 +1,6 @@
-    {%- set get_payment_methods -%}
-      select distinct payment_method from {{ ref('stg_payments') }}
-    {%- endset -%}
-
+{%- set get_payment_methods -%}
+    select distinct payment_method from {{ ref('stg_payments') }}
+{%- endset -%}
 
 {%- set results = run_query(get_payment_methods) -%}
 
