@@ -14,12 +14,41 @@ dbt Labs offers free online high-quality training that provides a hands-on exper
 ## Important Changes during setup!
 The course instructs you to create your own personal GitHub repository and a trial Snowflake account. The changes outlined below will allow you to access the UCSC Snowflake account and work from a shared GitHub repository. 
 
+
 The dbt Fundamentals course begins with a series of video introductions. Watch all of the videos in the first two series ("Welcome to dbt Fundamentals" & "Who is an analytics engineer?"). During the third series titled "Setup dbt Cloud", you can skip the section called "Loading training data in your warehouse". We have already staged the data in UCSC's Snowflake DBT_TRAINING database. Create your dbt Cloud account in the next section called "Create dbt Cloud account and GitHub repository", but do not create a GitHub repository. You can stop this video at 1:18 after creating your GitHub account, and before creating the GitHub repo. **Pause at this point and do not create the Github repo** . You will need to connect with a project team member who can help connect you to the dbt-training GitHub repo and provide the Snowflake account information.  Once you are all "wired up", proceed with the remaining sections/videos beginning with the section called "dbt Cloud Overview". The hands-on work begins with the "Models" series. Follow the course to its end. 
+
 
 
 ## Important course code accomodations for UCSC's Snowflake DBT training schemas
 You will need to replace the schema (raw) used in the videos with the schemas (jaffle_shop or stripe) we have used to stage the training data. It is best you login to the Snowflake DBT_TRAINING database to see what table(s) reside in each schema so you know when to reference each, but remember to always replace the "raw" schema used in the videos with either the "jaffle_shop" or "stripe" schema. The need for the first replacement appears in the "Building your first model" lesson of the "Models" module.
 
+For example: this from clause in this sql
+```sql
+with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from raw.jaffle_shop.customers
+
+),
+```
+would change to this:
+
+```sql
+with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from dbt_training.jaffle_shop.customers
+
+),
+```
 
 ## Ready to get started?
 
