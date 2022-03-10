@@ -20,6 +20,33 @@ The dbt Fundamentals course begins with a series of video introductions.  During
 ## Important course code accomodations for UCSC's Snowflake DBT training schemas
 You will need to replace the schema (raw) used in the videos with the schemas (jaffle_shop or stripe) we have used to stage the training data in UCSC's Snowflake DBT_TRAINING database. It is best you login to the Snowflake DBT_TRAINING database to see what table(s) reside in each schema so you know when to reference each, but remember to always replace the "raw" schema used in the videos with either the "jaffle_shop" or "stripe" schema. The need for the first replacement appears in the "Building your first model" lesson of the "Models" module.
 
+For example: this from clause in this sql
+```sql
+with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from raw.jaffle_shop.customers
+
+),
+```
+would change to this:
+
+```sql
+with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from dbt_training.jaffle_shop.customers
+
+),
+```
 
 ## Ready to get started?
 
