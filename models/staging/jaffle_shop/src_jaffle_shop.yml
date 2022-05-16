@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: Data about customers and orders from jaffle shop.
+    database: dbt_training
+    schema: jaffle_shop
+    tables:
+      - name: ld_customers
+        description: Raw customer data from jaffle shop.
+      - name: orders
+        description: Raw orders data from jaffle shop.
+
+models:
+  - name: stg_customers
+    description: Staged customer data from our jaffle shop app.
+    columns:
+      - name: customer_id
+        description: The primary key for customers.
+        tests:
+          - unique
+          - not_null
+  - name: stg_orders
+    description: Staged order data from our jaffle shop app.
+    columns: 
+      - name: order_id
+        description: The primary key for orders.
+        tests:
+          - unique
+          - not_null
+      - name: order_date
+        description: The date of the orginal order.
+      - name: order_status
+        description: "{{ doc('order_status') }}"
+        tests: 
+          - accepted_values:
+              values: ['returned', 'shipped', 'completed', 'return_pending', 'placed']
+      - name: customer_id
+        description: Foreign key to stg_customers.customer_id.
+        tests:
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id 
+             

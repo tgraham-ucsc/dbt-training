@@ -1,3 +1,5 @@
+
+=======
 ## Welcome to the dbt-training
 
 As we continue our data journey with the modern data stack, this repository is intended to be a collaborative space for UCSC staff to learn and gain familiarity with dbt and Snowflake. Therefore, it is **important** to understand that this repository and content are for training purposes only, and no UCSC data will be used during these classes.  
